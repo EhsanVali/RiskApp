@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.IO;
 using CsvHelper;
-using RiskApplication.Persistence.Factory;
+using RiskApplication.Persistence.BetsFactory;
 
 namespace RiskApplication.Persistence.CsvFileProvider
 {

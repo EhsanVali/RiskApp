@@ -1,6 +1,6 @@
 ﻿using CsvHelper;
 
-namespace RiskApplication.Persistence.Factory
+namespace RiskApplication.Persistence.BetsFactory
 {
     public interface IBetFactory<T> where T : class
     {

@@ -2,6 +2,8 @@
 using Castle.MicroKernel.Registration;
 using Castle.MicroKernel.SubSystems.Configuration;
 using Castle.Windsor;
+using RiskApplication.Persistence.CsvFileProvider;
+using RiskApplication.Web.CsvPath;
 
 namespace RiskApplication.Web.DependencyInjection
 {
@@ -12,6 +14,10 @@ namespace RiskApplication.Web.DependencyInjection
             container.Register(Classes.FromThisAssembly()
                                       .BasedOn<IController>()
                                       .LifestyleTransient());
+
+            container.Register(Component.For<IFilePathsProvider>()
+                                        .ImplementedBy<FilePathsProvider>()
+                                        .LifestyleSingleton());
         }
     }
 }

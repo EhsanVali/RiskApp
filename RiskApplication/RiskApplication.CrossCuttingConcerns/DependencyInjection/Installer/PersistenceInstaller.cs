@@ -4,8 +4,8 @@ using Castle.Windsor;
 using RiskApplication.Domain;
 using RiskApplication.Domain.Models;
 using RiskApplication.Persistence;
+using RiskApplication.Persistence.BetsFactory;
 using RiskApplication.Persistence.CsvFileProvider;
-using RiskApplication.Persistence.Factory;
 
 namespace RiskApplication.CrossCuttingConcerns.DependencyInjection.Installer
 {

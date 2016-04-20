@@ -1,28 +1,28 @@
 ﻿using CsvHelper;
 using RiskApplication.Domain.Models;
 
-namespace RiskApplication.Persistence.Factory
+namespace RiskApplication.Persistence.BetsFactory
 {
-    public class SettledBetFactory : IBetFactory<SettledBet>
+    public class UnsettledBetFactory : IBetFactory<UnsettledBet>
     {
-        public SettledBet CreateBet(ICsvReader csvReader)
+        public UnsettledBet CreateBet(ICsvReader csvReader)
         {
             var customerId = csvReader.GetField<int>("Customer");
             var eventId = csvReader.GetField<int>("Event");
             var participantId = csvReader.GetField<int>("Participant");
             var stake = csvReader.GetField<int>("Stake");
-            var win = csvReader.GetField<int>("Win");
+            var toWin = csvReader.GetField<int>("ToWin");
 
-            var settledBet = new SettledBet
+            var unsettledBet = new UnsettledBet
             {
                 CustomerId = customerId,
                 Event = eventId,
                 Participant = participantId,
                 Stake = stake,
-                Win = win
+                ToWin = toWin
             };
 
-            return settledBet;
+            return unsettledBet;
         }
     }
 }

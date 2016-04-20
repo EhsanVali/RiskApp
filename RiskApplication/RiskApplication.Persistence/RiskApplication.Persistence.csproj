@@ -46,9 +46,9 @@
   <ItemGroup>
     <Compile Include="CsvFileProvider\CsvFileProvider.cs" />
     <Compile Include="CsvFileProvider\IFilePathsProvider.cs" />
-    <Compile Include="Factory\IBetFactory.cs" />
-    <Compile Include="Factory\SettledBetFactory.cs" />
-    <Compile Include="Factory\UnsettledBetFactory.cs" />
+    <Compile Include="BetsFactory\IBetFactory.cs" />
+    <Compile Include="BetsFactory\SettledBetFactory.cs" />
+    <Compile Include="BetsFactory\UnsettledBetFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RiskRepository.cs" />
   </ItemGroup>

@@ -153,6 +153,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\RiskController.cs" />
+    <Compile Include="CsvPath\FilePathsProvider.cs" />
     <Compile Include="DependencyInjection\CastleWindsorConfig.cs" />
     <Compile Include="DependencyInjection\WebInstaller.cs" />
     <Compile Include="Global.asax.cs">
@@ -222,6 +223,10 @@
     <ProjectReference Include="..\RiskApplication.Domain\RiskApplication.Domain.csproj">
       <Project>{400758A3-B11F-40CA-B8C1-F62BC137B07D}</Project>
       <Name>RiskApplication.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RiskApplication.Persistence\RiskApplication.Persistence.csproj">
+      <Project>{41834f56-7f65-4e44-bb86-7fc9522d12b4}</Project>
+      <Name>RiskApplication.Persistence</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
