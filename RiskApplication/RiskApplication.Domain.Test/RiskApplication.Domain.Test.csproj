@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BusinessRulesTest\HighlyUnusualStakeBusinessRuleTest.cs" />
+    <Compile Include="BusinessRulesTest\HighPriceBusinessRuleTest.cs" />
     <Compile Include="BusinessRulesTest\UnusualStakeBusinessRuleTest.cs" />
     <Compile Include="BusinessRulesTest\UnusualWinRateBusinessRuleTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
