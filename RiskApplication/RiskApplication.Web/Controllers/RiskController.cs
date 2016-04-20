@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Collections.Generic;
 using System.Web.Mvc;
+using AutoMapper;
 using RiskApplication.Domain;
+using RiskApplication.Web.Models;
 
 namespace RiskApplication.Web.Controllers
 {
@@ -16,15 +15,26 @@ namespace RiskApplication.Web.Controllers
             _riskAnalysisService = riskAnalysisService;
         }
 
-        // GET: Risk
         public ActionResult Index()
         {
-            return View();
+            var betsAndRisks = _riskAnalysisService.GetUnsettledBetsRiskAnalysis();
+            var list = Mapper.Map<IEnumerable<UnsettledBetAndRiskViewModel>>(betsAndRisks);
+            return View(list);
         }
 
         public ActionResult CustomerSettledBets()
-        {            
-            return View();
+        {
+            var customer = _riskAnalysisService.GetCustomers();
+            var list = Mapper.Map<IEnumerable<CustomerVewModel>>(customer);
+            return View(list);
+        }
+
+        [Route("/Risk/GetSettledBet/{id}")]
+        public ActionResult GetSettledBet(int id)
+        {
+            var settledBets = _riskAnalysisService.ReadAllSettledBets(id);
+            var list = Mapper.Map<IEnumerable<SettledBetVewModel>>(settledBets);
+            return PartialView("SettledBets", list);
         }
     }
 }

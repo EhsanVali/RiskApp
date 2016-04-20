@@ -19,6 +19,7 @@ namespace RiskApplication.Web
             //TODO: Move to DI
             Mapper.Initialize(a => a.AddProfile<RiskProfile>());
             Mapper.Initialize(a => a.AddProfile<CustomerProfile>());
+            Mapper.Initialize(a => a.AddProfile<SettledBetProfile>());
             Mapper.AssertConfigurationIsValid();
         }
     }
