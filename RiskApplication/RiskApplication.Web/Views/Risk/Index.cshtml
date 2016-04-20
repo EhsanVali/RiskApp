@@ -2,8 +2,8 @@
 
 <h2>Unsettled bets & their risks</h2>
 
-<table class="table-bordered" id="statistics">
-    <thead>
+<table class="table table-hover" id="statistics">
+    <thead class="thead-inverse">
     <tr>
         <th>Customer</th>
         <th>Event</th>
@@ -22,7 +22,7 @@
     {
         var risk = @item.IsHighPrice || @item.IsHighStake || @item.IsUnusuallyHighStake || @item.HasUnusualWinRate;
 
-        <tr data-risk="@(risk ? '1' : '0')">
+        <tr class='@(risk ? "danger" : "info")'>
             <td class="col-md-1">@item.CustomerId</td>
             <td class="col-md-1">@item.Event</td>
             <td class="col-md-1">@item.Participant</td>

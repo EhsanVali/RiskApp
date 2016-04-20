@@ -23,27 +23,7 @@ textarea {
     max-width: 280px;
 }
 
-
-
-#statistics tr[data-risk='1']{
-    color: red;
-}
-#statistics tr[data-risk='0']{
-    color: green;
-}
-
-#statistics tbody tr:hover{
-    cursor: pointer;
-    background-color: #eaeaea;
-    font-weight: bold;
-}
-
-.selectedRow {
-    background-color: lightgray;
-    font-weight: bold;
-}
-
-#statistics thead{
-    cursor: pointer;
-    background-color: silver;
+#statistics th {
+    background-color: dimgray;
+    color: white;
 }
