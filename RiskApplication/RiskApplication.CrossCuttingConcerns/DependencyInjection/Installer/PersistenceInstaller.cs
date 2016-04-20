@@ -1,6 +1,8 @@
 ﻿using Castle.MicroKernel.Registration;
 using Castle.MicroKernel.SubSystems.Configuration;
 using Castle.Windsor;
+using RiskApplication.Domain;
+using RiskApplication.Persistence;
 
 namespace RiskApplication.CrossCuttingConcerns.DependencyInjection.Installer
 {
@@ -8,7 +10,9 @@ namespace RiskApplication.CrossCuttingConcerns.DependencyInjection.Installer
     {
         public void Install(IWindsorContainer container, IConfigurationStore store)
         {
-            throw new System.NotImplementedException();
+            container.Register(Component.For<IRiskRepository>()
+                                        .ImplementedBy<RiskRepository>()
+                                        .LifestyleSingleton());
         }
     }
 }
