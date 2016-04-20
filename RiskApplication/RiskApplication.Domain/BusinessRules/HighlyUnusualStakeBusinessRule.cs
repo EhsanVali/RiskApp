@@ -2,7 +2,7 @@
 
 namespace RiskApplication.Domain.BusinessRules
 {
-    public class UnusualStakeBusinessRule
+    public class HighlyUnusualStakeBusinessRule
     {
         public bool IsValid(CustomerUnsettledBet customerUnsettledBet)
         {
@@ -11,7 +11,7 @@ namespace RiskApplication.Domain.BusinessRules
                 return false;
             }
 
-            return customerUnsettledBet.Customer.AverageStake * 10 <= customerUnsettledBet.UnsettledBet.Stake;
+            return customerUnsettledBet.Customer.AverageStake * 30 <= customerUnsettledBet.UnsettledBet.Stake;
         }
     }
 }
