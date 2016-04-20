@@ -16,10 +16,11 @@ namespace RiskApplication.Persistence.Test
             _settledBetCsvFileReader = new Mock<ICsvFileProvider<SettledBet>>();
             _unsettledBetCsvFileReader = new Mock<ICsvFileProvider<UnsettledBet>>();
             _filePathsProvider = new Mock<IFilePathsProvider>();
+
             _filePathsProvider.Setup(p => p.GetSettledBetsFilePath()).Returns(SettledBetsFilePath);
             _filePathsProvider.Setup(p => p.GetUnsettledBetsFilePath()).Returns(UnsettledBetsFilePath);
 
-            _sut = new RiskRepository(_filePathsProvider.Object,
+            _repository = new RiskRepository(_filePathsProvider.Object,
                 _settledBetCsvFileReader.Object,
                 _unsettledBetCsvFileReader.Object);
         }
@@ -29,7 +30,7 @@ namespace RiskApplication.Persistence.Test
         private Mock<ICsvFileProvider<SettledBet>> _settledBetCsvFileReader;
         private Mock<ICsvFileProvider<UnsettledBet>> _unsettledBetCsvFileReader;
         private Mock<IFilePathsProvider> _filePathsProvider;
-        private RiskRepository _sut;
+        private RiskRepository _repository;
 
         [Test]
         public void ShouldReadSettledBets()
@@ -40,7 +41,7 @@ namespace RiskApplication.Persistence.Test
                 new SettledBet {CustomerId = 2, Stake = 50, Win = 90}
             });
 
-            var list = _sut.GetAllSettledBets();
+            var list = _repository.GetAllSettledBets();
             Assert.AreEqual(2, list.Count());
         }
 
@@ -54,7 +55,7 @@ namespace RiskApplication.Persistence.Test
                 new UnsettledBet {CustomerId = 3, Stake = 40, ToWin = 60}
             });
 
-            var list = _sut.GetAllUnsettledBets();
+            var list = _repository.GetAllUnsettledBets();
             Assert.AreEqual(3, list.Count());
         }
     }
