@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace RiskApplication.Persistence.Csv
+namespace RiskApplication.Persistence.CsvFileProvider
 {
     public interface ICsvFileProvider<T> where T : class
     {

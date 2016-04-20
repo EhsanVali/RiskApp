@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using RiskApplication.Domain;
 using RiskApplication.Domain.Models;
-using RiskApplication.Persistence.Csv;
+using RiskApplication.Persistence.CsvFileProvider;
 
 namespace RiskApplication.Persistence
 {

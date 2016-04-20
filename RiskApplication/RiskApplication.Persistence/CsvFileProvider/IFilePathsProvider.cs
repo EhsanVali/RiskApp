@@ -1,4 +1,4 @@
-﻿namespace RiskApplication.Persistence.Csv
+﻿namespace RiskApplication.Persistence.CsvFileProvider
 {
     public interface IFilePathsProvider
     {

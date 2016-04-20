@@ -2,8 +2,10 @@
 using Castle.MicroKernel.SubSystems.Configuration;
 using Castle.Windsor;
 using RiskApplication.Domain;
+using RiskApplication.Domain.Models;
 using RiskApplication.Persistence;
-using RiskApplication.Persistence.Csv;
+using RiskApplication.Persistence.CsvFileProvider;
+using RiskApplication.Persistence.Factory;
 
 namespace RiskApplication.CrossCuttingConcerns.DependencyInjection.Installer
 {
@@ -17,6 +19,14 @@ namespace RiskApplication.CrossCuttingConcerns.DependencyInjection.Installer
 
             container.Register(Component.For(typeof(ICsvFileProvider<>))
                                         .ImplementedBy(typeof(CsvFileProvider<>))
+                                        .LifestyleSingleton());
+
+            container.Register(Component.For<IBetFactory<SettledBet>>()
+                                        .ImplementedBy<SettledBetFactory>()
+                                        .LifestyleSingleton());
+
+            container.Register(Component.For<IBetFactory<UnsettledBet>>()
+                                        .ImplementedBy<UnsettledBetFactory>()
                                         .LifestyleSingleton());
         }
     }
