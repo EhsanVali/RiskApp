@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Web.Mvc;
 using AutoMapper;
 using RiskApplication.Domain;
@@ -8,24 +9,26 @@ namespace RiskApplication.Web.Controllers
 {
     public class RiskController : Controller
     {
+        private readonly IMapper _mapper;
         private readonly IRiskAnalysisService _riskAnalysisService;
 
-        public RiskController(IRiskAnalysisService riskAnalysisService)
+        public RiskController(IRiskAnalysisService riskAnalysisService, IMapper mapper)
         {
+            _mapper = mapper;
             _riskAnalysisService = riskAnalysisService;
         }
 
         public ActionResult Index()
         {
             var betsAndRisks = _riskAnalysisService.GetUnsettledBetsRiskAnalysis();
-            var list = Mapper.Map<IEnumerable<UnsettledBetAndRiskViewModel>>(betsAndRisks);
+            var list = _mapper.Map<IEnumerable<UnsettledBetAndRiskViewModel>>(betsAndRisks.ToList());
             return View(list);
         }
 
         public ActionResult CustomerSettledBets()
         {
-            var customer = _riskAnalysisService.GetCustomers();
-            var list = Mapper.Map<IEnumerable<CustomerVewModel>>(customer);
+            var customers = _riskAnalysisService.GetCustomers();
+            var list = _mapper.Map<IEnumerable<CustomerVewModel>>(customers);
             return View(list);
         }
 
@@ -33,7 +36,7 @@ namespace RiskApplication.Web.Controllers
         public ActionResult GetSettledBet(int id)
         {
             var settledBets = _riskAnalysisService.ReadAllSettledBets(id);
-            var list = Mapper.Map<IEnumerable<SettledBetVewModel>>(settledBets);
+            var list = _mapper.Map<IEnumerable<SettledBetVewModel>>(settledBets);
             return PartialView("SettledBets", list);
         }
     }
