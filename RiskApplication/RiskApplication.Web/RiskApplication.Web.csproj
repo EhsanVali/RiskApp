@@ -209,6 +209,10 @@
       <Project>{12f1bdcc-cf8a-4a4c-89d7-3fafc4935660}</Project>
       <Name>RiskApplication.CrossCuttingConcerns</Name>
     </ProjectReference>
+    <ProjectReference Include="..\RiskApplication.Domain\RiskApplication.Domain.csproj">
+      <Project>{400758A3-B11F-40CA-B8C1-F62BC137B07D}</Project>
+      <Name>RiskApplication.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
