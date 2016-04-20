@@ -40,6 +40,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\CustomerStatistics.cs" />
+    <Compile Include="Models\RiskAnalysis.cs" />
+    <Compile Include="Models\SettledBet.cs" />
+    <Compile Include="Models\UnsettledBet.cs" />
+    <Compile Include="Models\UnsettledBetWithRiskAnalysis.cs" />
+    <Compile Include="Models\UnsettledBetWithStatistics.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
