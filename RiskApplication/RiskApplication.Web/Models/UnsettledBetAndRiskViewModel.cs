@@ -8,7 +8,7 @@
         public int Stake { get; set; }
         public int ToWin { get; set; }
         public double WinningPercentage { get; set; }
-        public bool IsHighPrize { get; set; }
+        public bool IsHighPrice { get; set; }
         public bool IsUnusuallyHighStake { get; set; }
         public bool IsHighStake { get; set; }
         public bool HasUnusualWinRate { get; set; }

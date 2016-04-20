@@ -1,1 +1,39 @@
-﻿
+﻿@model IEnumerable<RiskApplication.Web.Models.UnsettledBetAndRiskViewModel>
+
+<h2>Unsettled bets & their risks</h2>
+
+<table class="table-bordered" id="statistics">
+    <thead>
+    <tr>
+        <th>Customer</th>
+        <th>Event</th>
+        <th>Participant</th>
+        <th>Stake</th>
+        <th>To win</th>
+        <th>High prize</th>
+        <th>High stake</th>
+        <th>Unusually high stake</th>
+        <th>Unusually high win rate</th>
+        <th>Win rate</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model)
+    {
+        var risk = @item.IsHighPrice || @item.IsHighStake || @item.IsUnusuallyHighStake || @item.HasUnusualWinRate;
+
+        <tr data-risk="@(risk ? '1' : '0')">
+            <td class="col-md-1">@item.CustomerId</td>
+            <td class="col-md-1">@item.Event</td>
+            <td class="col-md-1">@item.Participant</td>
+            <td class="col-md-1">@item.Stake.ToString("N")</td>
+            <td class="col-md-1">@item.ToWin.ToString("N")$</td>
+            <td class="col-md-1">@item.IsHighPrice</td>
+            <td class="col-md-1">@item.IsHighStake</td>
+            <td class="col-md-2">@item.IsUnusuallyHighStake</td>
+            <td class="col-md-2">@item.HasUnusualWinRate</td>
+            <td class="col-md-1">@item.WinningPercentage.ToString("N")%</td>
+        </tr>
+    }
+    </tbody>
+</table>

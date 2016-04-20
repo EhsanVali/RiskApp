@@ -13,7 +13,7 @@ namespace RiskApplication.Web.Models.Mapper
                 .ForMember(p => p.Participant, opt => opt.MapFrom(t => t.UnsettledBet.Participant))
                 .ForMember(p => p.Stake, opt => opt.MapFrom(t => t.UnsettledBet.Stake))
                 .ForMember(p => p.ToWin, opt => opt.MapFrom(t => t.UnsettledBet.ToWin))
-                .ForMember(p => p.IsHighPrize, opt => opt.MapFrom(t => t.RiskAnalysis.IsHighPrize))
+                .ForMember(p => p.IsHighPrice, opt => opt.MapFrom(t => t.RiskAnalysis.IsHighPrice))
                 .ForMember(p => p.IsHighStake, opt => opt.MapFrom(t => t.RiskAnalysis.IsHighStake))
                 .ForMember(p => p.IsUnusuallyHighStake, opt => opt.MapFrom(t => t.RiskAnalysis.IsUnusuallyHighStake))
                 .ForMember(p => p.HasUnusualWinRate, opt => opt.MapFrom(t => t.RiskAnalysis.HasUnusualWinRate));

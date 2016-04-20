@@ -61,7 +61,7 @@ namespace RiskApplication.Services
                 UnsettledBet = unsettledBetWithStatistics.UnsettledBet,
                 RiskAnalysis = new RiskAnalysis
                 {
-                    IsHighPrize = _highPriceBusinessRule.IsValid(unsettledBetWithStatistics.UnsettledBet),
+                    IsHighPrice = _highPriceBusinessRule.IsValid(unsettledBetWithStatistics.UnsettledBet),
                     IsUnusuallyHighStake = _highlyUnusualStakeBusinessRule.IsValid(unsettledBetWithStatistics),
                     HasUnusualWinRate = _unusualWinRateBusinessRule.IsValid(unsettledBetWithStatistics.Customer),
                     IsHighStake = _unusualStakeBusinessRule.IsValid(unsettledBetWithStatistics)
