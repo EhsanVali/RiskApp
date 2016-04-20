@@ -40,14 +40,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\CustomerStatistics.cs" />
+    <Compile Include="BusinessRules\UnusualWinRateBusinessRule.cs" />
+    <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\RiskAnalysis.cs" />
     <Compile Include="Models\SettledBet.cs" />
     <Compile Include="Models\UnsettledBet.cs" />
-    <Compile Include="Models\UnsettledBetWithRiskAnalysis.cs" />
-    <Compile Include="Models\UnsettledBetWithStatistics.cs" />
+    <Compile Include="Models\UnsettledBetRiskAnalysis.cs" />
+    <Compile Include="Models\CustomerUnsettledBet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

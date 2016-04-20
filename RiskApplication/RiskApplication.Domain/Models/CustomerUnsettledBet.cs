@@ -1,8 +1,8 @@
 ﻿namespace RiskApplication.Domain.Models
 {
-    public class UnsettledBetWithStatistics
+    public class CustomerUnsettledBet
     {
-        public CustomerStatistics CustomerStatistics { get; set; }
+        public Customer Customer { get; set; }
         public UnsettledBet UnsettledBet { get; set; }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace RiskApplication.Domain.Models
 {
-    public class UnsettledBetWithRiskAnalysis
+    public class UnsettledBetRiskAnalysis
     {
         public double WinningPercentage { get; set; }
         public RiskAnalysis RiskAnalysis { get; set; }
