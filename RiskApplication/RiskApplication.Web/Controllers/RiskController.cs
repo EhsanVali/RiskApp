@@ -13,5 +13,10 @@ namespace RiskApplication.Web.Controllers
         {
             return View();
         }
+
+        public ActionResult CustomerSettledBets()
+        {            
+            return View();
+        }
     }
 }
