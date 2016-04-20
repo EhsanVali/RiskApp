@@ -1,18 +1,36 @@
-﻿@model System.Collections.Generic.IEnumerable<RiskApplication.Web.Models.SettledBetVewModel>
+﻿@using System.Diagnostics
+@model IEnumerable<RiskApplication.Web.Models.SettledBetVewModel>
 
 @{
-    Layout = null;
+    var customer = @Model != null && @Model.Any() ? @Model.First().CustomerId.ToString() : string.Empty;
 }
 
-<!DOCTYPE html>
+<h2>customer's Settled bets : @customer</h2>
+<table class="table-bordered" id="statistics">
+    <thead>
+    <tr>
+        <th>Customer</th>
+        <th>Participant</th>
+        <th>Event</th>
+        <th>Stake</th>
+        <th>Won</th>
+    </tr>
+    </thead>
+    <tbody>
 
-<html>
-<head>
-    <title>title</title>
-</head>
-<body>
-<div>
-      
-</div>
-</body>
-</html>
+    @{
+        Debug.Assert(Model != null, "Model != null");
+    }
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td class="col-md-2">@item.CustomerId</td>
+            <td class="col-md-2">@item.Participant</td>
+            <td class="col-md-2">@item.Event</td>
+            <td class="col-md-2">@item.Stake.ToString("N")$</td>
+            <td class="col-md-4">@item.Win.ToString("N")$</td>
+        </tr>
+    }
+    </tbody>
+</table>
