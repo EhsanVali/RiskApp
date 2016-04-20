@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="BusinessRules\HighlyUnusualStakeBusinessRule.cs" />
     <Compile Include="BusinessRules\HighPriseBusinessRule.cs" />
+    <Compile Include="BusinessRules\IBusinessRule.cs" />
     <Compile Include="BusinessRules\UnusualStakeBusinessRule.cs" />
     <Compile Include="BusinessRules\UnusualWinRateBusinessRule.cs" />
     <Compile Include="Models\Customer.cs" />

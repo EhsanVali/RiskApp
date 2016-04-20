@@ -2,7 +2,11 @@
 
 namespace RiskApplication.Domain.BusinessRules
 {
-    public class HighlyUnusualStakeBusinessRule
+    public interface IHighlyUnusualStakeBusinessRule : IBusinessRule<CustomerUnsettledBet>
+    {
+    }
+
+    public class HighlyUnusualStakeBusinessRule : IHighlyUnusualStakeBusinessRule
     {
         public bool IsValid(CustomerUnsettledBet customerUnsettledBet)
         {

@@ -2,7 +2,11 @@
 
 namespace RiskApplication.Domain.BusinessRules
 {
-    public class UnusualWinRateBusinessRule
+    public interface IUnusualWinRateBusinessRule : IBusinessRule<Customer>
+    {
+    }
+
+    public class UnusualWinRateBusinessRule : IUnusualWinRateBusinessRule
     {
         public bool IsValid(Customer customer)
         {
