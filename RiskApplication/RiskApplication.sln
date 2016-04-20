@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiskApplication.Persistence
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiskApplication.Services", "RiskApplication.Services\RiskApplication.Services.csproj", "{5DE1A530-78AF-492B-A0F4-102B9B8DCCED}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiskApplication.CrossCuttingConcerns", "RiskApplication.CrossCuttingConcerns\RiskApplication.CrossCuttingConcerns.csproj", "{12F1BDCC-CF8A-4A4C-89D7-3FAFC4935660}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{5DE1A530-78AF-492B-A0F4-102B9B8DCCED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5DE1A530-78AF-492B-A0F4-102B9B8DCCED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5DE1A530-78AF-492B-A0F4-102B9B8DCCED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12F1BDCC-CF8A-4A4C-89D7-3FAFC4935660}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12F1BDCC-CF8A-4A4C-89D7-3FAFC4935660}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12F1BDCC-CF8A-4A4C-89D7-3FAFC4935660}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12F1BDCC-CF8A-4A4C-89D7-3FAFC4935660}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
