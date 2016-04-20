@@ -46,6 +46,7 @@
     <Compile Include="BusinessRules\UnusualStakeBusinessRule.cs" />
     <Compile Include="BusinessRules\UnusualWinRateBusinessRule.cs" />
     <Compile Include="IRiskAnalysisService.cs" />
+    <Compile Include="IRiskRepository.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\RiskAnalysis.cs" />
     <Compile Include="Models\SettledBet.cs" />
