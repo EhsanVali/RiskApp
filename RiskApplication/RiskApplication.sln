@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiskApplication.Services", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiskApplication.CrossCuttingConcerns", "RiskApplication.CrossCuttingConcerns\RiskApplication.CrossCuttingConcerns.csproj", "{12F1BDCC-CF8A-4A4C-89D7-3FAFC4935660}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiskApplication.Web", "RiskApplication.Web\RiskApplication.Web.csproj", "{5450CCD5-6B19-4285-86EC-DC18616FA3BB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,10 @@ Global
 		{12F1BDCC-CF8A-4A4C-89D7-3FAFC4935660}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{12F1BDCC-CF8A-4A4C-89D7-3FAFC4935660}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{12F1BDCC-CF8A-4A4C-89D7-3FAFC4935660}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5450CCD5-6B19-4285-86EC-DC18616FA3BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5450CCD5-6B19-4285-86EC-DC18616FA3BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5450CCD5-6B19-4285-86EC-DC18616FA3BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5450CCD5-6B19-4285-86EC-DC18616FA3BB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
