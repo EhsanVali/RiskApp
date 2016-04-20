@@ -2,6 +2,7 @@
 using Castle.Windsor;
 using Castle.Windsor.Installer;
 using Castle.Windsor.Mvc;
+using RiskApplication.CrossCuttingConcerns.DependencyInjection;
 using RiskApplication.Web.DependencyInjection;
 using WebActivatorEx;
 
@@ -20,6 +21,8 @@ namespace RiskApplication.Web.DependencyInjection
 
             var controllerFactory = new WindsorControllerFactory(_container.Kernel);
             ControllerBuilder.Current.SetControllerFactory(controllerFactory);
+
+            new CompositionRoot().ComposeApplication(_container);
         }
 
         /// <summary>

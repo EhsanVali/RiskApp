@@ -204,6 +204,12 @@
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RiskApplication.CrossCuttingConcerns\RiskApplication.CrossCuttingConcerns.csproj">
+      <Project>{12f1bdcc-cf8a-4a4c-89d7-3fafc4935660}</Project>
+      <Name>RiskApplication.CrossCuttingConcerns</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
